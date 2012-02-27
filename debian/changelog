@@ -1,0 +1,7 @@
+svi-data-sdk (0.1.0-2) unstable; urgency=low
+
+  * Initial Release.
+  * Git: pkgs/s/svi-data-sdk
+  * Tag: svi-data-sdk_0.1.0-2
+
+ -- Sangil Yoon <si83.yoon@samsung.com>  Wed, 07 Dec 2011 12:56:46 +0900

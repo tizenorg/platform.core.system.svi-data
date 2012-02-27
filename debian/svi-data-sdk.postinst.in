@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ ${USER} = "root" ]
+then
+    # Change file owner
+    chown root:root @PREFIX@/share/svi/sound/touch/*.wav
+    chown root:root @PREFIX@/share/svi/sound/operation/*.wav
+fi
+
+# Change File permissions
+chmod 644 @PREFIX@/share/svi/sound/touch/*.wav
+chmod 644 @PREFIX@/share/svi/sound/operation/*.wav

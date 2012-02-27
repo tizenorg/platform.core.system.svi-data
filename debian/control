@@ -1,0 +1,12 @@
+Source: svi-data-sdk
+Section: misc
+Priority: extra
+Maintainer: Jayoun Lee <airjany@samsung.com>, Seokkyu Jang <seokkyu.jang@samsung.com>, Sangil Yoon <si83.yoon@samsung.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: svi-data-sdk
+Section: misc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: svi library data package(SDK)
