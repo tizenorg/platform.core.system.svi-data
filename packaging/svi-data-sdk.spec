@@ -5,6 +5,7 @@ Release:    0
 Group:      TO_BE/FILLED_IN
 License:    Apache License v2.0
 Source0:    %{name}-%{version}.tar.gz
+Source1001: packaging/svi-data-sdk.manifest 
 BuildRequires: cmake
 
 
@@ -15,6 +16,7 @@ Description: svi library audio data package (SDK)
 %setup -q
 
 %build
+cp %{SOURCE1001} .
 cmake . -DCMAKE_INSTALL_PREFIX=%{_prefix}
 make %{?jobs:-j%jobs}
 
@@ -23,6 +25,7 @@ rm -rf %{buildroot}
 %make_install
 
 %files
+%manifest svi-data-sdk.manifest
 %defattr(644,root,root,-) 
 %{_datadir}/svi/sound/operation/call_connect.wav
 %{_datadir}/svi/sound/operation/low_battery.wav
