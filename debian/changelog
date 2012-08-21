@@ -1,0 +1,24 @@
+svi-data-sdk (0.1.1) unstable; urgency=low
+
+  * apply latest svi resource
+  * add symbolic link pointing to default resource for supporting changable svi resource feature
+  * Git: slp-source.sec.samsung.net:slp/pkgs/s/svi-data-sdk
+  * Tag: svi-data-sdk_0.1.1
+
+ -- Hyungdeuk Kim <hd3.kim@samsung.com>  Wed, 27 Jun 2012 17:22:00 +0900
+
+svi-data-sdk (0.1.0-2) unstable; urgency=low
+
+  * Changed boilerplate
+  * Git: slp-source.sec.samsung.net:slp/pkgs/s/svi-data-sdk
+  * Tag: svi-data-sdk_0.1.0-2
+
+ -- Sangil Yoon <si83.yoon@samsung.com>  Fri, 02 Dec 2011 17:22:00 +0900
+
+svi-data-sdk (0.1.0-1) unstable; urgency=low
+
+  * Initial Release.
+  * Git: slp-source.sec.samsung.net:slp/pkgs/s/svi-data-sdk
+  * Tag: svi-data-sdk_0.1.0-1
+
+ -- Sangil Yoon <si83.yoon@samsung.com>  Tue, 06 Sep 2011 10:06:03 +0900
