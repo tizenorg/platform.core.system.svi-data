@@ -1,7 +1,7 @@
 Name:       svi-data-sdk
 Summary:    svi library audio data package (SDK)
-Version:    0.1.1
-Release:    6
+Version:    0.1.2
+Release:    1
 Group:      System/Resources
 License:    Apache License, Version 2.0
 Source0:    %{name}-%{version}.tar.gz
@@ -24,49 +24,49 @@ make %{?jobs:-j%jobs}
 rm -rf %{buildroot}
 %make_install
 
+mkdir -p %{buildroot}/opt/share/svi/sound/touch
+mkdir -p %{buildroot}/opt/share/svi/sound/operation
+mkdir -p %{buildroot}/opt/share/svi/haptic/default
+mkdir -p %{buildroot}/opt/share/svi/haptic/touch
+
 %post
-mkdir -p /opt/share/svi/sound/touch
-ln -s %{_datadir}/svi/sound/touch/key0.wav            /opt/share/svi/sound/touch/key0.wav
-ln -s %{_datadir}/svi/sound/touch/key1.wav            /opt/share/svi/sound/touch/key1.wav
-ln -s %{_datadir}/svi/sound/touch/key2.wav            /opt/share/svi/sound/touch/key2.wav
-ln -s %{_datadir}/svi/sound/touch/key3.wav            /opt/share/svi/sound/touch/key3.wav
-ln -s %{_datadir}/svi/sound/touch/key4.wav            /opt/share/svi/sound/touch/key4.wav
-ln -s %{_datadir}/svi/sound/touch/key5.wav            /opt/share/svi/sound/touch/key5.wav
-ln -s %{_datadir}/svi/sound/touch/key6.wav            /opt/share/svi/sound/touch/key6.wav
-ln -s %{_datadir}/svi/sound/touch/key7.wav            /opt/share/svi/sound/touch/key7.wav
-ln -s %{_datadir}/svi/sound/touch/key8.wav            /opt/share/svi/sound/touch/key8.wav
-ln -s %{_datadir}/svi/sound/touch/key9.wav            /opt/share/svi/sound/touch/key9.wav
-ln -s %{_datadir}/svi/sound/touch/keyasterisk.wav     /opt/share/svi/sound/touch/keyasterisk.wav
-ln -s %{_datadir}/svi/sound/touch/keysharp.wav        /opt/share/svi/sound/touch/keysharp.wav
-ln -s %{_datadir}/svi/sound/touch/sip.wav             /opt/share/svi/sound/touch/sip.wav
-ln -s %{_datadir}/svi/sound/touch/sip_backspace.wav   /opt/share/svi/sound/touch/sip_backspace.wav
-ln -s %{_datadir}/svi/sound/touch/touch.wav           /opt/share/svi/sound/touch/touch.wav
-
-mkdir -p /opt/share/svi/sound/operation
-ln -s %{_datadir}/svi/sound/operation/call_connect.wav         /opt/share/svi/sound/operation/call_connect.wav
-ln -s %{_datadir}/svi/sound/operation/call_disconnect.wav      /opt/share/svi/sound/operation/call_disconnect.wav
-ln -s %{_datadir}/svi/sound/operation/charger_connection.wav   /opt/share/svi/sound/operation/charger_connection.wav
-ln -s %{_datadir}/svi/sound/operation/fully_charged.wav        /opt/share/svi/sound/operation/fully_charged.wav
-ln -s %{_datadir}/svi/sound/operation/list_reorder.wav         /opt/share/svi/sound/operation/list_reorder.wav
-ln -s %{_datadir}/svi/sound/operation/lock.wav                 /opt/share/svi/sound/operation/lock.wav
-ln -s %{_datadir}/svi/sound/operation/low_battery.wav          /opt/share/svi/sound/operation/low_battery.wav
-ln -s %{_datadir}/svi/sound/operation/minute_minder.wav        /opt/share/svi/sound/operation/minute_minder.wav
-ln -s %{_datadir}/svi/sound/operation/power_on.wav             /opt/share/svi/sound/operation/power_on.wav
-ln -s %{_datadir}/svi/sound/operation/shutter.wav              /opt/share/svi/sound/operation/shutter.wav
-ln -s %{_datadir}/svi/sound/operation/slider_sweep.wav         /opt/share/svi/sound/operation/slider_sweep.wav
-ln -s %{_datadir}/svi/sound/operation/unlock.wav               /opt/share/svi/sound/operation/unlock.wav
-ln -s %{_datadir}/svi/sound/operation/volume_control.wav       /opt/share/svi/sound/operation/volume_control.wav
-
-mkdir -p /opt/share/svi/haptic/default
-ln -s %{_datadir}/svi/haptic/default/Basic_call.tht			/opt/share/svi/haptic/default/Basic_call.tht
-
-mkdir -p /opt/share/svi/haptic/touch
-ln -s %{_datadir}/svi/haptic/touch/touch.tht					/opt/share/svi/haptic/touch/touch.tht
+ln -s %{_datadir}/svi/sound/touch/key0.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key1.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key2.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key3.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key4.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key5.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key6.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key7.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key8.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/key9.wav            /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/keyasterisk.wav     /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/keysharp.wav        /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/sip.wav             /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/sip_backspace.wav   /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/touch/touch.wav           /opt/share/svi/sound/touch
+ln -s %{_datadir}/svi/sound/operation/call_connect.wav         /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/call_disconnect.wav      /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/charger_connection.wav   /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/fully_charged.wav        /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/list_reorder.wav         /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/lock.wav                 /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/low_battery.wav          /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/minute_minder.wav        /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/power_on.wav             /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/shutter.wav              /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/slider_sweep.wav         /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/unlock.wav               /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/sound/operation/volume_control.wav       /opt/share/svi/sound/operation
+ln -s %{_datadir}/svi/haptic/default/Basic_call.tht				/opt/share/svi/haptic/default
+ln -s %{_datadir}/svi/haptic/touch/touch.tht					/opt/share/svi/haptic/touch
 
 %files
-%manifest svi-data-sdk.manifest
 %defattr(644,root,root,-)
-%{_datadir}/svi/sound/operation/*
-%{_datadir}/svi/sound/touch/*
-%{_datadir}/svi/haptic/default/*
-%{_datadir}/svi/haptic/touch/*
+%{_datadir}/svi/*
+%defattr(666,app,app,-)
+%dir /opt/share/svi/sound/touch
+%dir /opt/share/svi/sound/operation
+%dir /opt/share/svi/haptic/default
+%dir /opt/share/svi/haptic/touch
+%manifest svi-data-sdk.manifest
