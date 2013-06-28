@@ -62,6 +62,7 @@ ln -s %{_datadir}/svi/haptic/default/Basic_call.tht				/opt/share/svi/haptic/def
 ln -s %{_datadir}/svi/haptic/touch/touch.tht					/opt/share/svi/haptic/touch
 
 %files
+%manifest %{name}.manifest
 %defattr(644,root,root,-)
 %{_datadir}/svi/*
 %defattr(666,app,app,-)
