@@ -1,0 +1,8 @@
+Change-Id: I0e8d5870fa7f8ff2b91c20e31b6d370389f4eef8
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 10:07:32 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4451
+Project: platform/core/system/svi-data
+Branch: refs/heads/tizen
